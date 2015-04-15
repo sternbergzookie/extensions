@@ -1,7 +1,8 @@
-//* TITLE Estufar's Sidebar Fix **//
-//* VERSION 1.0 **//
+
+	//* TITLE estufars_sidebar_fix **//
+//* VERSION 1.0 REV A **//
 //* DESCRIPTION  **//
-//* DEVELOPER estufar **//
+//* DEVELOPER STUDIOXENIX **//
 //* FRAME false **//
 //* BETA false **//
 
@@ -10,12 +11,14 @@ XKit.extensions.estufars_sidebar_fix = new Object({
 	running: false,
 
 	run: function() {
-		// XKit initialization
-		XKit.tools.init_css("estufars_sidebar_fix");
 		this.running = true;
-		
-		// find the account button
-		account = document.getElementById("account_button");
+	},
+
+	destroy: function() {
+		this.running = false;
+	}
+
+});
 		// simulate a click to activate the menu
 		account.click();
 		// find the menu created because of the click
